@@ -52,20 +52,20 @@ Your objective is to understand and practice the basic file permissions commands
 
 **Instructions:**
 
-1. Use the [\`ls -l\`](https://linuxize.com/post/linux-ls-command/) command to view the permissions of files in the current directory.
+1. Use the [\`ls -l\`](https://www.atatus.com/blog/ls-command-in-linux-with-example/) command to view the permissions of files in the current directory.
    - This command lists files with detailed information including permissions, ownership, and modification dates.
 
 2. Identify the owner, group, and permission string of a given file.
    - Understand the structure of the output from \`ls -l\`. For example, in \`-rw-r--r-- 1 user group ...\`, 'user' is the owner, 'group' is the group, and \`-rw-r--r--\` is the permission string.
 
-3. Check the default permissions for new files and directories using the [\`umask\`](https://linuxize.com/post/how-to-use-umask-to-set-default-permissions/) command.
+3. Check the default permissions for new files and directories using the [\`umask\`](https://wiki.archlinux.org/title/umask) command.
 
-4. Change the permissions of a file using the [\`chmod\`](https://linuxize.com/post/chmod-command-in-linux/) command. Practice with both absolute (using octal notation) and symbolic modes.
+4. Change the permissions of a file using the [\`chmod\`](https://www.linode.com/docs/guides/modify-file-permissions-with-chmod/) command. Practice with both absolute (using octal notation) and symbolic modes.
    - For example, \`chmod 755 filename\` or \`chmod u+x filename\`.
 
-5. View the attributes of a file using the [\`lsattr\`](https://man7.org/linux/man-pages/man1/lsattr.1.html) command. This might display attributes like 'i' for immutable.
+5. View the attributes of a file using the [\`lsattr\`](https://www.ibm.com/docs/en/aix/7.2?topic=l-lsattr-command) command. This might display attributes like 'i' for immutable.
 
-6. Change the attributes of a file using the [\`chattr\`](https://man7.org/linux/man-pages/man1/chattr.1.html) command.
+6. Change the attributes of a file using the [\`chattr\`](https://www.tecmint.com/chattr-command-examples/) command.
    - For example, \`chattr +i filename\` to set a file as immutable.
 
 Remember: This terminal is emulated. Not all commands may work as they do in a real environment. Stick to the instructions for best results.
@@ -257,6 +257,9 @@ Abschluss: Sobald Sie alle Aufgaben erfolgreich abgeschlossen haben, können Sie
                 <DownloadButton onClick={handleDownload}>
                     Lösung herunterladen
                 </DownloadButton>
+                <Link to="/">  {/* This assumes that your home route is '/' */}
+                    <button>Back Home</button>
+                </Link>
             </RightColumn>
         </FullHeightContainer>
     );
